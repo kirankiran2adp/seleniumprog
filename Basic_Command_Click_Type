@@ -1,0 +1,15 @@
+public static void m2() {
+		 
+		WebDriver dr = new FirefoxDriver();
+		dr.get("http://demoqa.com");
+		dr.manage().window().maximize();
+		dr.findElement(By.xpath(".//*[@id='menu-item-374']/a")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		dr.findElement(By.xpath(".//*[@id='name_3_firstname']")).sendKeys("XXX");
+		
+	}
